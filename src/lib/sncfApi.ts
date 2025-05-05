@@ -258,7 +258,7 @@ function getDisruptionReason(departure: any, disruptions: any[]): string {
   const trainId = departure.id || "";
   const charSum = trainId
     .split("")
-    .reduce((sum, char) => sum + char.charCodeAt(0), 0);
+    .reduce((sum: any, char: string) => sum + char.charCodeAt(0), 0);
 
   // Raisons typiques de la SNCF
   const reasons = [
